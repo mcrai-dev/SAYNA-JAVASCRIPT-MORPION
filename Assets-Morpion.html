@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class='container'>
+        <h1 class='name'>Tic-Tac-Toe</h1>
+
+        <div class='row range'>
+            <div class='col-6 turn player-turn row'>
+                <div class='col-6 score you-score'>0</div>
+                <div class='col-6 you-name'>YOU</div>
+            </div>
+            <div class='col-6 turn cpu-turn row'>
+                <div class='col-6'>CPU</div>
+                <div class='col-6 cpu-score'>0</div>
+            </div>
+        </div>
+
+        <div class='grid-container'>
+            <button class='grid-item' id='item1' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item2' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item3' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item4' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item5' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item6' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item7' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item8' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item9' onclick='choiseCase(this.id)'></button>
+        </div>
+        <button class="reset" onclick="reset()">Reset</button>
+    </div>
+
+    <div class="layer animated bounceInUp">
+        <h1>Choix de l'equipe</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <button class="choose1 btn" id="X" style="color: #4286f4;" onclick="teamchoise(this.id)">X</button>
+            </div>
+            <div class="col-lg-6">
+                <button class="choose2 btn" id="O" style="color: #e29126;" onclick="teamchoise(this.id)">O</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="layer2">
+        <h1 class="winner-name"></h1>
+        <button class="end-game" onclick="winnershow()">Close</button>
+    </div>
+    <div class="layer3">
+        <h1>Match nul !</h1>
+        <button class="draw" onclick="matchnull()">Try again.</button>
+    </div>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/moteur.js"></script>
+</body>
+
+</html>
